@@ -1,0 +1,11 @@
+# dsh-rhine-switch bundle patch
+#
+# 一条 insert 行挂载本插件。Host 半边是空壳，实际工作在 client 半边：
+# 它注册 `settings.section`，出现为设置侧栏里的「莱茵皮肤」折叠面板。
+#
+# 开关直接写 `rhine-splash` 的 profile 配置（全部字段 volatile ⇒ 立即生效、不重启）。
+#
+# ⚠ 不要同时把包加进 dsh.profile.bundles —— 同一 id 会被插两次。
+- insert:
+    - id: rhine-switch
+      name: 'dsh-rhine-switch'

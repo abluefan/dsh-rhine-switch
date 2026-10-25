@@ -1,0 +1,35 @@
+{
+  "name": "dsh-rhine-switch",
+  "version": "0.1.0",
+  "description": "为 dsh-rhine-splash 提供折叠式皮肤开关面板：开屏动画、界面主题、品牌、Logo、推理滑桿、计费、时长、退场动画等逐项控制，写入 rhine-splash 的 profile 配置（volatile，立即生效）。",
+  "private": true,
+  "type": "module",
+  "main": "./index.js",
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT"
+}
